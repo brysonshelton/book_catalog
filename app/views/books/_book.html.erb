@@ -1,4 +1,8 @@
 <div id="<%= dom_id book %>">
+  <% if book.cover_url.present? %>
+    <%= image_tag book.cover_url, alt: "#{book.title} cover", class: "w-32 h-48 object-cover mb-2" %>
+  <% end %>
+  
   <p>
     <strong>Title:</strong>
     <%= book.title %>
